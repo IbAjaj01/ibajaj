@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ajaj-Hobbies</title>
+		<link rel="icon" type"image/png" href="hobbies.png">
+		<link rel="stylesheet" type="text/css" href="styles.css" >
+		<link rel="stylesheet" type="text/css" href="sidebar.css" >
+		<link rel="stylesheet" type="text/css" href="animated.css" >
+
+		<div id="logo">Ibraheem Ajaj's Website | Hobbies</div>
+
+		<div class="sidebar">
+			<img class="Left" src="ajaj.jpg">
+			<a class="rollIn" href="index.html">Home</a>
+			<a class="fadeIn active">Hobbies</a>
+			<a class="rollIn" href="projects.html">Projects</a>
+			<a class="rollIn" href="about.html">About</a> 
+			<a class="rollIn" href="contact.html">Contact me</a>
+		</div>
+	</head>
+	<body background="bg2.jpg" >
+		<div id="page-hob">
+		<p id="header-hob">My hobbies ⬇⬇⬇</p>
+
+		<br><p class="cls1" >Coding</p>
+		<img src="coding.jpg" >
+
+		<p class="cls1" ><br>Football</p>
+		<img src="football.jpg" >
+
+		<p class="cls1" ><br>Table Tennis</p>
+		<img src="tennis.jpg">
+		</div>
+
+		<a onclick="topFunction()" id="go-top" class="fadeIn" >Go to top</a>
+		<p id="copyrights"><button onclick="myFunction()">Reload page</button>
+
+<script>
+function myFunction() {
+    location.reload();
+}
+</script> © 2017 Ibraheem Ajaj. All Rights Reserved. </p>
+
+		<script>
+		// When the user scrolls down 700px from the top of the document, show the button
+		window.onscroll = function() {scrollFunction()};
+
+		function scrollFunction() {
+			if (document.body.scrollTop > 270 || document.documentElement.scrollTop > 700) {
+			document.getElementById("go-top").style.display = "block";
+			} else {
+				document.getElementById("go-top").style.display = "none";
+			}
+		}
+
+		// When the user clicks on the button, scroll to the top of the document
+		function topFunction() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		}
+		</script>
+	</body>

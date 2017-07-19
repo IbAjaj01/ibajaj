@@ -1,0 +1,81 @@
+{% extends "home.html" %}
+{% block body %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="icon" type"image png" href="home.png">
+		<link rel="stylesheet" type="text/css" href="../static/photos.css" >
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>{{title}}</title>
+		<div id="logo">Ibraheem Ajaj's Website</div>
+	</head>
+	<body background="../static/bg.jpg" >
+	<div id="page-home">
+		{% if name%}
+		<span id="name">Hello, {{name}}</span>
+		{% endif %}<br>
+		<p id="wlc">Welcome to Ibraheem's website</p>
+		<div class="slideshow-container">
+
+		<div class="mySlides fade">
+			<div class="numbertext">1 / 5</div>
+			<img src="../static/ajj.jpg">
+		</div>
+		<div class="mySlides fade">
+			<div class="numbertext">2 / 5</div>
+			<img src="../static/-jeep.jpg">
+		</div>
+		<div class="mySlides fade">
+			<div class="numbertext">3 / 5</div>
+			<img src="-../static/mo3ta9em.jpg">
+		</div>
+		<div class="mySlides fade">
+			<div class="numbertext">4 / 5</div>	
+			<img src="../static/IMG_0596.jpg">
+		</div>
+		<div class="mySlides fade">
+			<div class="numbertext">5 / 5</div>
+			<img src="../static/-ribky.jpg">
+		</div>
+		<div style="text-align:center">
+			<span class="dot"></span> 
+			<span class="dot"></span> 
+			<span class="dot"></span> 
+			<span class="dot"></span> 
+			<span class="dot"></span> 
+		</div>
+		</div>
+		<p>Ibraheem is 16 years teenager who has a dream to become a professional programmer so he started learning about computers and how it works and what makes it compatible with our life.</p>
+
+		<p>In the age of 5 it was the first time ever to touch a computer in his life but he liked it.</p>
+
+		<p>In the age of 14 he started to learn about computers and programming and a small information about it through his brother,his brother was studying computer engineering and helped him to learn more and more about computers and basics of programming.</p>
+
+		<p>In the age of 15 he joined a program <em>(Code For Palestine)</em> that gives all the information you need to become a programmer and learn any language you want such as python, html,java,javascript....,the camp last for three years of learning.The first year you learn about turtle and python (python basics).The second year you learn about html and CSS.The third year you learn the most difficult language in programming, java.</p>
+	</div>
+
+	<p id="copyrights" > © 2017 Ibraheem Ajaj. All Rights Reserved. </p>
+
+	<script>
+		var slideIndex = 0;
+		showSlides();
+
+		function showSlides() {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("dot");
+				for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";  
+			}
+			slideIndex++;
+			if (slideIndex> slides.length) {slideIndex = 1}    
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex-1].style.display = "block";  
+			dots[slideIndex-1].className += " active";
+			setTimeout(showSlides, 2250); // Change image every 2 seconds
+		}
+	</script>
+	</body>
+{% endblock %}

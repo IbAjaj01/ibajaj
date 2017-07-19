@@ -1,0 +1,31 @@
+.sidebar {
+	margin: 0;
+	top: 0;
+	left: 0;
+	position: fixed;
+	text-align: center;
+	width: 20%;/* 273px */
+	background-color: #111;
+	height: 100%
+}
+.sidebar a {
+	color: #818181;
+	font-size: 150%;
+	text-decoration: none;
+	display: block;
+	padding: 17px;
+	transition: 0.4s;
+	box-shadow: none;
+}
+.sidebar a:hover {
+	color: #f1f1f1;
+}
+.sidebar a.active {
+	color: #f1f1f1;
+}
+.sidebar img{
+	height: 38%;/* 250px */
+	width: 93%;/* 250px */
+	margin-top: 5%;
+	border-radius: 15px;
+}

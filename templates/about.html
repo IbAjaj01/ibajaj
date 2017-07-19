@@ -1,0 +1,32 @@
+{% extends "home.html" %}
+{% block body %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="icon" type"image png" href="about.png">
+		<title>{{title}}</title>
+		<div id="logo">Ibraheem Ajaj's Website | About</div>
+	</head>
+	<body background="../static/bg.jpg" >
+	<div id="page-about">
+		<p>Full name:Ibraheem Ajaj</p>
+		<p>Date of birth:11/11/2001</p>
+		<p>Lives in Tulkarm-Palestine</p>
+		<p>Code For Palestine member/Jawwal</p>
+		<p>Studies at ‎Attil Secondary Boys' School</p>
+		<p>Programming Languages:Python, Html and CSS</p>
+		<ol>
+		{% if display == True %}
+		{% for string in list %}
+		<li>{{ string }}</li>
+		{% endfor %}
+		{% elif display == False %}
+		<img style="border-radius:15px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Shish_barak.jpg/800px-Shish_barak.jpg" width="510" height="290">
+		{% endif %}
+		</ol>
+	</div>
+
+
+	<p id="copyrights" class="cr" > © 2017 Ibraheem Ajaj. All Rights Reserved. </p>
+	</body>
+{% endblock %}
