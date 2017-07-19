@@ -2,33 +2,33 @@ from flask import Flask, render_template
 import random
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/home')
 def index():
-	return render_template("index.html", title="Ajaj-About")
+	return render_template("index.html", title="Ajaj-Home")
 
 # @app.route('/index.html/<name>')
 # def indexnm(name):
 # 	return render_template("index.html", name=name)
 
-@app.route('/about.html/r-list')
-def indexrl():
-	friends=["Sari", "Rabee3", "Hamza", "Amin", "Ribhy"]
-	display=True
-	return render_template("about.html", display=display, list=friends)
+# @app.route('/about.html/r-list')
+# def indexrl():
+# 	friends=["Sari", "Rabee3", "Hamza", "Amin", "Ribhy"]
+# 	display=True
+# 	return render_template("about.html", display=display, list=friends)
 
-@app.route('/hobbies.html')
+@app.route('/hobbies')
 def hobbies():
 	return render_template("hobbies.html", title="Ajaj-Hobbies")
 
-@app.route('/projects.html')
+@app.route('/projects')
 def projects():
 	return render_template("projects.html", title="Ajaj-Projects")
 
-@app.route('/about.html')
+@app.route('/about')
 def about():
 	return render_template("about.html", title="Ajaj-About")
 
-@app.route('/contact.html')
+@app.route('/contact')
 def contact():
 	return render_template("contact.html", title="Ajaj-Contact")
 
