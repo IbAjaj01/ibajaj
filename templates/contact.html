@@ -9,15 +9,45 @@
 	</head>
 	<body background="../static/bg2.jpg">
 		<div id="page-contact">
-	
-		<p>Tell me what you really think about me,<br>Be honest and sincere, you'll stay anonymous :)<br>⬇⬇<br>
+		
+<!-- 		<p>Tell me what you really think about me,<br>Be honest and sincere, you'll stay anonymous :)<br>⬇⬇<br> -->
 
-		<textarea id="feedback" name="feedback" placeholder="Write your feedbak here ..." rows="5" cols="30"></textarea>
-		<br>
-		<input id="feed-button" title="Submit your feedback" type="submit" value="Submit">
+<style>
+input[type=text], input[type=email], textarea{
+	width: 80%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin-top: 6px;
+	margin-bottom: 16px;
+}
+.container {
+	border-radius: 5px;
+	width: 50%;
+	background-color: #f2f2f2;
+	padding: 20px;
+}
+</style>
+
+		<h3>Contact Form</h3>
+		<div class="container">
+		  <form action="/db" method="POST">
+		  
+		    <label>User Name</label><br>
+		    <input type="text" name="userName" placeholder="Your name.."><br>
+		    <label>Your Email</label><br>
+		    <input type="email" name="email"  placeholder="Your email.."><br>
+
+		    <label for="subject">Feedback</label><br>
+		    <textarea id="subject" name="subject" required autocomplete="off" placeholder="Write something.." style="height:115px"></textarea><br>
+
+		    <input id="feed-button" title="Submit your feedback" type="submit" value="Submit">
+		  </form>
+		</div>
+
 
 		<a title="Sayat (Feedback)" class="cls2" href="http://sayat.me/ibajaj01" target="_blank">Click here</a>
-		<br>My number:0597616205<br>Email:barhoom_ajaj@hotmail.com</p>
+		<br>My number: 0597616205<br>Email: barhoom_ajaj@hotmail.com</p>
 
 		<a title="Facebook" target="_blank" href="https://www.facebook.com/ibajaj01" ><img src="../static/facebook.png"></a>
 		<a title="Instagram" target="_blank" href="https://www.instagram.com/ibraheem_ajaj/" ><img src="../static/instagram.png"></a>

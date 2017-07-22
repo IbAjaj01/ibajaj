@@ -1,0 +1,15 @@
+<!-- {% extends "home.html" %}
+{% block body %} -->
+<center>
+<h2>contacts table</h2>
+<table>
+	{% for person in contacts %}
+	<tr>
+		<td>{{person.name}}</td>
+		<td>{{person.email}}</td>
+		<td>{{person.subject}}</td>
+	</tr>
+	{% endfor %}
+</table>
+</center>
+<!-- {% endblock %} -->

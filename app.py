@@ -1,14 +1,31 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+import dataset
 import random
 app = Flask(__name__)
+db = dataset.connect("postgres://afoannpojeexms:a84ab8f3f4296172e4e2b9b0189adf00fe94705efb17ccbb5d96196a01941f4a@ec2-23-21-96-70.compute-1.amazonaws.com:5432/d5cs30nlpgtp86")
 
 @app.route('/home')
 def index():
 	return render_template("index.html", title="Ajaj-Home")
 
-# @app.route('/index.html/<name>')
+# @app.route('/formExample', methods=["GET", "POST"])
+# def formExmaple():
+# 	if request.method == "GET":
+# 		return render_template("contact.html")
+# 	else:
+# 		form = request.form
+# 		userName = form["username"]
+# 		email = form["email"]
+# 		subject = form["subject"]
+# 		return render_template("contact.html", username=username, emailValue=emailValue, subjectValue=subjectValue)
+
+
+# @app.route('/index.html/listExamples', methods=["POST"])
 # def indexnm(name):
-# 	return render_template("index.html", name=name)
+# 	displayContent = request.form["displayContent"]
+# 	print(displayContent)
+# 	display = 
+
 
 # @app.route('/about.html/r-list')
 # def indexrl():
@@ -35,9 +52,24 @@ def contact():
 
 
 
+@app.route('/db', methods=["POST"])
+def showContact():
+	form = request.form
+	name = form["userName"]
+	email = form["email"]
+	subject = form["subject"]
+	contactsTable = db["contacts"]
+	entry = {"name":name, "email":email, "subject":subject}
+	contactsTable.insert(entry)
+	print list(contactsTable.all())
 
+	return render_template("show.html", name=name, email=email, subject=subject)
 
-
+# @app.route('/showusers')
+# def showAll():
+# 	contacts = db["contact"]
+# 	allcontacts = list(contacts.all())
+# 	return render_template("show.html", contacts=allcontacts)
 
 
 

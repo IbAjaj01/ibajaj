@@ -9,6 +9,10 @@ a {
 	color: #731cdc;/* red */
 	background-color: #f6dc5f;/* #a8c9ff */
 }
+.home{
+	margin-top: 10%;
+	margin-left: 21%;
+}
 #logo {
 	top: 0;
 	left: 0;
@@ -39,7 +43,10 @@ a {
 	text-align: center;
 }
 .cls2{
-	text-decoration: none;
+	color :yellow;
+}
+.cls2 a:hover{
+	color: red;
 }
 #name{
 	text-align: center;
@@ -104,7 +111,9 @@ a {
 }
 
 #feedback{
-	font-family: ubuntu;
+	height: 100px;
+    width: 300px;
+}
 }
 #feed-button {
 	background-color: #009688;
